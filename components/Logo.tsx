@@ -1,10 +1,13 @@
 import React from 'react'
-
-function Logo() {
+import { cn } from '@/lib/utils'
+interface Props {
+  size:string
+}
+function Logo(props:Props) {
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-     className=' group hover:bg-inherit h-60 w-60 lg:h-80 lg:w-80  '
+     className={cn('group hover:bg-inherit h-60 w-60',props.size)}
     viewBox="0 0 100 100"
   >
     <circle className="fill-primary group-hover:fill-secondary  ease-out duration-700"  cx="13" cy="29" r="2" fill="#78a0cf"></circle>
