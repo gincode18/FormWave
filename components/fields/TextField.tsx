@@ -68,7 +68,7 @@ function DesignerComponent({ elementInstance }: { elementInstance: FormElementIn
         {label}
         {required && "*"}
       </Label>
-      <Input readOnly disabled placeholder={placeHolder}        className=" text-accent"/>
+      <Input readOnly disabled placeholder={placeHolder}  className=" placeholder:text-pr text-accent"/>
       {helperText && <p className="text-muted-foreground text-[0.8rem]">{helperText}</p>}
     </div>
   );

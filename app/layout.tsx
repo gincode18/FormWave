@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/themeprovider";
 import DesignerContextProvider from "@/components/context/DesignerContext";
 import "./globals.css";
@@ -24,12 +25,13 @@ export default function RootLayout({
           <DesignerContextProvider>
             <ThemeProvider
               attribute="data-theme"
-              defaultTheme="dark"
+              defaultTheme="dracula"
               enableSystem={false}
               storageKey="notes-theme"
             >
               <ModeToggle></ModeToggle>
               {children}
+              <Toaster></Toaster>
             </ThemeProvider>
           </DesignerContextProvider>
         </body>

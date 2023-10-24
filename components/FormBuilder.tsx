@@ -2,9 +2,9 @@
 
 import { Form } from "@prisma/client";
 import React, { useEffect, useState } from "react";
-// import PreviewDialogBtn from "./PreviewDialogBtn";
-// import PublishFormBtn from "./PublishFormBtn";
-// import SaveFormBtn from "./SaveFormBtn";
+import PreviewDialogBtn from "./PreviewDialogBtn";
+import PublishFormBtn from "./PublishFormBtn";
+import SaveFormBtn from "./SaveFormBtn";
 import Designer from "./Designer";
 import { DndContext, MouseSensor, TouchSensor, useSensor, useSensors } from "@dnd-kit/core";
 import DragOverlayWrapper from "./DragOverlayWrapper";
@@ -112,11 +112,11 @@ function FormBuilder({ form }: { form: Form }) {
             {form.name}
           </h2>
           <div className="flex items-center gap-2">
-            {/* <PreviewDialogBtn /> */}
+            <PreviewDialogBtn />
             {!form.published && (
               <>
-                {/* <SaveFormBtn id={form.id} /> */}
-                {/* <PublishFormBtn id={form.id} /> */}
+                <SaveFormBtn id={form.id} />
+                <PublishFormBtn id={form.id} />
               </>
             )}
           </div>
