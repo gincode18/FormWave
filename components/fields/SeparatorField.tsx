@@ -39,5 +39,5 @@ function FormComponent({ elementInstance }: { elementInstance: FormElementInstan
 }
 
 function PropertiesComponent({ elementInstance }: { elementInstance: FormElementInstance }) {
-  return <p>No properties for this element</p>;
+  return <p className="text-primary">No properties for this element</p>;
 }

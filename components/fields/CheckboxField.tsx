@@ -1,6 +1,11 @@
 "use client";
 
-import { ElementsType, FormElement, FormElementInstance, SubmitFunction } from "../FormElements";
+import {
+  ElementsType,
+  FormElement,
+  FormElementInstance,
+  SubmitFunction,
+} from "../FormElements";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { z } from "zod";
@@ -10,7 +15,15 @@ import { useEffect, useState } from "react";
 import useDesigner from "../hooks/useDesigner";
 import { IoMdCheckbox } from "react-icons/io";
 
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
 import { Switch } from "../ui/switch";
 import { cn } from "@/lib/utils";
 import { Checkbox } from "../ui/checkbox";
@@ -44,7 +57,10 @@ export const CheckboxFieldFormElement: FormElement = {
   formComponent: FormComponent,
   propertiesComponent: PropertiesComponent,
 
-  validate: (formElement: FormElementInstance, currentValue: string): boolean => {
+  validate: (
+    formElement: FormElementInstance,
+    currentValue: string
+  ): boolean => {
     const element = formElement as CustomInstance;
     if (element.extraAttributes.required) {
       return currentValue === "true";
@@ -58,7 +74,11 @@ type CustomInstance = FormElementInstance & {
   extraAttributes: typeof extraAttributes;
 };
 
-function DesignerComponent({ elementInstance }: { elementInstance: FormElementInstance }) {
+function DesignerComponent({
+  elementInstance,
+}: {
+  elementInstance: FormElementInstance;
+}) {
   const element = elementInstance as CustomInstance;
   const { label, required, helperText } = element.extraAttributes;
   const id = `checkbox-${element.id}`;
@@ -70,7 +90,9 @@ function DesignerComponent({ elementInstance }: { elementInstance: FormElementIn
           {label}
           {required && "*"}
         </Label>
-        {helperText && <p className="text-muted-foreground text-[0.8rem]">{helperText}</p>}
+        {helperText && (
+          <p className="text-muted-foreground text-[0.8rem]">{helperText}</p>
+        )}
       </div>
     </div>
   );
@@ -89,7 +111,9 @@ function FormComponent({
 }) {
   const element = elementInstance as CustomInstance;
 
-  const [value, setValue] = useState<boolean>(defaultValue === "true" ? true : false);
+  const [value, setValue] = useState<boolean>(
+    defaultValue === "true" ? true : false
+  );
   const [error, setError] = useState(false);
 
   useEffect(() => {
@@ -122,7 +146,14 @@ function FormComponent({
           {required && "*"}
         </Label>
         {helperText && (
-          <p className={cn("text-muted-foreground text-[0.8rem]", error && "text-red-500")}>{helperText}</p>
+          <p
+            className={cn(
+              "text-muted-foreground text-[0.8rem]",
+              error && "text-red-500"
+            )}
+          >
+            {helperText}
+          </p>
         )}
       </div>
     </div>
@@ -130,7 +161,11 @@ function FormComponent({
 }
 
 type propertiesFormSchemaType = z.infer<typeof propertiesSchema>;
-function PropertiesComponent({ elementInstance }: { elementInstance: FormElementInstance }) {
+function PropertiesComponent({
+  elementInstance,
+}: {
+  elementInstance: FormElementInstance;
+}) {
   const element = elementInstance as CustomInstance;
   const { updateElement } = useDesigner();
   const form = useForm<propertiesFormSchemaType>({
@@ -173,17 +208,19 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="label"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Label</FormLabel>
+              <FormLabel className="text-primary">Label</FormLabel>
               <FormControl>
                 <Input
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}
                 />
               </FormControl>
-              <FormDescription>
-                The label of the field. <br /> It will be displayed above the field
+              <FormDescription className=" text-secondary">
+                The label of the field. <br /> It will be displayed above the
+                field
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -194,16 +231,17 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="helperText"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Helper text</FormLabel>
+              <FormLabel className="text-primary">Helper text</FormLabel>
               <FormControl>
                 <Input
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className=" text-secondary">
                 The helper text of the field. <br />
                 It will be displayed below the field.
               </FormDescription>
@@ -217,14 +255,17 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           render={({ field }) => (
             <FormItem className="flex items-center justify-between rounded-lg border p-3 shadow-sm">
               <div className="space-y-0.5">
-                <FormLabel>Required</FormLabel>
-                <FormDescription>
+                <FormLabel className="text-primary">Required</FormLabel>
+                <FormDescription className=" text-secondary">
                   The helper text of the field. <br />
                   It will be displayed below the field.
                 </FormDescription>
               </div>
               <FormControl>
-                <Switch checked={field.value} onCheckedChange={field.onChange} />
+                <Switch
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

@@ -187,16 +187,17 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="label"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Label</FormLabel>
+              <FormLabel className=" text-primary">Label</FormLabel>
               <FormControl>
                 <Input
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className=" text-secondary">
                 The label of the field. <br /> It will be displayed above the field
               </FormDescription>
               <FormMessage />
@@ -208,16 +209,17 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="placeHolder"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>PlaceHolder</FormLabel>
+              <FormLabel className=" text-primary">PlaceHolder</FormLabel>
               <FormControl>
                 <Input
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}
                 />
               </FormControl>
-              <FormDescription>The placeholder of the field.</FormDescription>
+              <FormDescription className=" text-secondary">The placeholder of the field.</FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -227,16 +229,17 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="helperText"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Helper text</FormLabel>
+              <FormLabel className=" text-primary">Helper text</FormLabel>
               <FormControl>
                 <Input
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}
                 />
               </FormControl>
-              <FormDescription>
+              <FormDescription className=" text-secondary">
                 The helper text of the field. <br />
                 It will be displayed below the field.
               </FormDescription>
@@ -251,7 +254,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           render={({ field }) => (
             <FormItem>
               <div className="flex justify-between items-center">
-                <FormLabel>Options</FormLabel>
+                <FormLabel className=" text-primary">Options</FormLabel>
                 <Button
                   variant={"outline"}
                   className="gap-2"
@@ -291,7 +294,7 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
                 ))}
               </div>
 
-              <FormDescription>
+              <FormDescription className=" text-secondary">
                 The helper text of the field. <br />
                 It will be displayed below the field.
               </FormDescription>
@@ -306,8 +309,8 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           render={({ field }) => (
             <FormItem className="flex items-center justify-between rounded-lg border p-3 shadow-sm">
               <div className="space-y-0.5">
-                <FormLabel>Required</FormLabel>
-                <FormDescription>
+                <FormLabel className=" text-primary">Required</FormLabel>
+                <FormDescription className=" text-secondary">
                   The helper text of the field. <br />
                   It will be displayed below the field.
                 </FormDescription>

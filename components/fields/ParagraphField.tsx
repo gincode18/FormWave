@@ -103,11 +103,12 @@ function PropertiesComponent({ elementInstance }: { elementInstance: FormElement
           name="text"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Text</FormLabel>
+              <FormLabel className=" text-primary">Text</FormLabel>
               <FormControl>
                 <Textarea
                   rows={5}
                   {...field}
+                  className=" text-secondary"
                   onKeyDown={(e) => {
                     if (e.key === "Enter") e.currentTarget.blur();
                   }}

@@ -39,8 +39,8 @@ function PublishFormBtn({ id }: { id: number }) {
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button className="gap-2  bg-gradient-to-r  from-primary  via-accent  to-secondary">
+      <AlertDialogTrigger asChild className="">
+        <Button className="gap-2  bg-gradient-to-r  from-primary  via-accent  to-secondary hover:bg-gradient-to-t hover:from-secondary hover:via-primary hover:to-accent ">
           <MdOutlinePublish className="h-4 w-4" />
           Publish
         </Button>
@@ -49,11 +49,12 @@ function PublishFormBtn({ id }: { id: number }) {
         <AlertDialogHeader>
           <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. After publishing you will not be able to edit this form. <br />
+            This action cannot be undone. After publishing you will not be able
+            to edit this form. <br />
             <br />
             <span className="font-medium">
-              By publishing this form you will make it available to the public and you will be able to collect
-              submissions.
+              By publishing this form you will make it available to the public
+              and you will be able to collect submissions.
             </span>
           </AlertDialogDescription>
         </AlertDialogHeader>

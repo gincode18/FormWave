@@ -130,7 +130,7 @@ export function StatsCard({
 }
 
 function FormCardSkeleton() {
-  return <Skeleton className="border-2 border-primary-/20 h-[190px] w-full" />;
+  return <Skeleton className="border-2 border-primary h-[190px] w-full" />;
 }
 
 async function FormCards() {
@@ -146,7 +146,7 @@ async function FormCards() {
 
 function FormCard({ form }: { form: Form }) {
   return (
-    <Card>
+    <Card className=" border border-primary">
       <CardHeader>
         <CardTitle className="flex items-center gap-2 justify-between">
           <span className="truncate font-bold">{form.name}</span>
