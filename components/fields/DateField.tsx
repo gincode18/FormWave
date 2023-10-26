@@ -152,6 +152,7 @@ function FormComponent({
         <PopoverContent className="w-auto p-0" align="start">
           <Calendar
             mode="single"
+            className=" bg-base-100"
             selected={date}
             onSelect={(date) => {
               setDate(date);

@@ -7,6 +7,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ModeToggle } from "@/components/ToggleTheme";
 const inter = Inter({ subsets: ["latin"] });
+import NextTopLoader from "nextjs-toploader";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
+          <NextTopLoader />
           <DesignerContextProvider>
             <ThemeProvider
               attribute="data-theme"
