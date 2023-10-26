@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Live 
+https://form-wave-amber.vercel.app/
+# TestUser
+Username : gincode18test
+Password : Spark@123*
+
+# FormWave - The Ultimate Form Builder App
+
+FormWave is a cutting-edge form builder application that empowers you to create stunning, responsive forms with ease. Built on Next.js 13, Dnd-kit, and a host of other technologies, FormWave simplifies the process of form creation and data collection.
+
+## Features
+
+- **Responsive Design:** Forms created with FormWave adapt to any screen size, ensuring a seamless user experience on all devices.
+
+- **Drag and Drop Designer:** Our intuitive drag-and-drop designer makes form creation a breeze. Layout fields, form fields, and more can be added and customized effortlessly.
+
+- **Layout Fields:** Create the perfect form structure with layout fields, including Title, SubTitle, Spacer, Separator, and Paragraph.
+
+- **Form Fields:** Choose from a variety of form fields, including Text, Number, Select, Date, Checkbox, and Textarea. Custom fields can be easily added to meet your unique requirements.
+
+- **Form Preview:** Real-time form editing is made simple with a preview dialog that lets you see how your form will appear to users.
+
+- **Share Form URL:** Easily share your form's URL with others, making collaboration and data collection a breeze.
+
+- **Form Submission and Validation:** Ensure data accuracy with built-in form submission and validation capabilities.
+
+- **Form Stats:** Stay informed with form statistics, including visit counts and submission data.
+
+## Technologies Used
+
+- **Next.js 13 with AppRouter:** Cutting-edge web framework for a fast and smooth user experience.
+
+- **Dnd-kit Library:** Enables drag-and-drop form design.
+
+- **ServerActions:** Seamlessly manage form submissions and user interactions.
+
+- **Typescript:** Ensures robust code and developer-friendly collaboration.
+
+- **Tailwind CSS / Shadcn UI:** Beautiful and responsive design for a great user experience.
+
+- **Vercel PostgreSQL:** Reliable data storage and retrieval.
+
+- **Prisma as ORM:** Efficient and developer-friendly database operations.
 
 ## Getting Started
 
-First, run the development server:
+To get started with FormWave, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. **Clone the repository:**
