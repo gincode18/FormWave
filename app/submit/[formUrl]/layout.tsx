@@ -2,6 +2,7 @@ import Logo from "@/components/Logo";
 import React, { ReactNode } from "react";
 import { UserButton } from "@clerk/nextjs";
 import { ModeToggle } from "@/components/ToggleTheme";
+import { ThemeProvider } from "@/components/themeprovider";
 
 function Layout({ children }: { children: ReactNode }) {
   return (
@@ -15,7 +16,17 @@ function Layout({ children }: { children: ReactNode }) {
           <UserButton afterSignOutUrl="/sign-in" />
         </div>
       </nav>
-      <main className="flex w-full flex-grow">{children}</main>
+      <main className="flex w-full flex-grow">
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="dracula"
+          enableSystem={false}
+          storageKey="notes-theme2"
+        >
+          <ModeToggle></ModeToggle>
+          {children}
+        </ThemeProvider>
+      </main>
     </div>
   );
 }

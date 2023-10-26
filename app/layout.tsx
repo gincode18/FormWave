@@ -25,16 +25,11 @@ export default function RootLayout({
         <body className={inter.className}>
           <NextTopLoader />
           <DesignerContextProvider>
-            <ThemeProvider
-              attribute="data-theme"
-              defaultTheme="dracula"
-              enableSystem={false}
-              storageKey="notes-theme"
-            >
+
               <ModeToggle></ModeToggle>
               {children}
               <Toaster></Toaster>
-            </ThemeProvider>
+     
           </DesignerContextProvider>
         </body>
       </html>
