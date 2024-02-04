@@ -159,6 +159,8 @@ async function SubmissionsTable({ id }: { id: number }) {
               <TableHead className="text-muted-foreground text-right uppercase">Submitted at</TableHead>
             </TableRow>
           </TableHeader>
+
+          
           <TableBody>
             {rows.map((row, index) => (
               <TableRow key={index}>
